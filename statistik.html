@@ -19,7 +19,7 @@
 	<div class="navigation" id="navigation">
 	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <a href="index.html">Startseite</a>
-      <a href="#">Geschichte</a>
+      <a href="herkunft.html">Herkunft</a>
       <a href="galerie.html">Galerie</a>
       <a href="kiew.html">Hauptstadt</a>
 	  <a href="statistik.html">Statistik</a>
@@ -45,13 +45,17 @@
 	    <canvas id="piechart"></canvas>
 	      <script>
 	          var ctx = document.getElementById("piechart");
+						// Pie-Diagramm erstellen
 						var myPieChart = new Chart(ctx, {
 							type: 'pie',
 							data: {
+								// Markierungen
 								labels: ["Kiew", "Kharkiw", "Odessa", "Dnepr", "Donetsk"],
 								datasets: [{
 								    label: "Menschen",
+									// Werte
 									data: [2925760, 1439036, 1010783, 976525, 927201],
+									// Farben
 									backgroundColor: ["#6A9AE8", "#FFFFA3", "#B84DCC", "#00CC66", "#FF6210"],
 									borderColor: ["#FFFFF5", "#FFFFF5", "#FFFFF5", "#FFFFF5", "#FFFFF5"],
 									borderWidth: 1
@@ -68,13 +72,17 @@
 	    <canvas id="barchart"></canvas>
 	      <script>
 		      var ctx2 = document.getElementById("barchart")
+			  // Balkendiagramm erstekken
 		      var myBarChart = new Chart(ctx2, {
                     type: 'bar',
                     data: {
+						// Markierungen
                         labels: ["Ukrainer", "Russen", "Moldawier", "Weissrussen", "Krimtataren"],
                         datasets: [{
                                label: "Anzahl (%)",
+							   // Farben
                                backgroundColor: ["#6A9AE8", "#FFFFA3", "#B84DCC", "#00CC66", "#FF6210"],
+							   // Werte
                                data: [77.8, 17.3, 0.8, 0.6, 0.5]
                         }]
                     },
@@ -89,13 +97,17 @@
 	    <canvas id="chart"></canvas>
 	      <script>
 		  	  var ctx3 = document.getElementById("chart")
+			  // Liniendiagramm erstellen
 		      var myChart = new Chart(ctx3, {
                     type: 'line',
                     data: {
+						// Markierungen
                         labels: ["2013", "2014", "2015", "2016", "2017"],
                         datasets: [{
                                label: "Menschen (Tausend)",
+							   // Farben
                                backgroundColor: ["#6A9AE8", "#FFFFA3", "#B84DCC", "#00CC66", "#FF6210"],
+							   // Werte
                                data: [45553.0, 45426.2, 42928.9, 42760.5, 42584.5],
                         }]
                     },

@@ -1,0 +1,11 @@
+.main p , h3{
+	text-indent: 25px;
+}
+
+.main h1 {
+	color: #0033FF;
+}
+
+.main h3 {
+	color: #ffd700;
+}

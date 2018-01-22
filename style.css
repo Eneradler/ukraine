@@ -111,8 +111,16 @@ body {
 }
 
 
-
+/*Fuer kleinere Geraete*/
 @media screen and (max-height: 450px) {
-  .navigation {padding-top: 15px;}
-  .navigation a {font-size: 18px;}
+  .navigation {
+	  padding-top: 15px;
+  }
+  .navigation a {
+	  font-size: 18px;
+  }
+  .menu {
+	position: relative;
+	width: 30%;
+  }
 }

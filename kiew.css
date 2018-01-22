@@ -5,7 +5,7 @@
 	text-indent: 25px;
 }
 
-/* Slideshow container */
+/* Slideshow Behaelter */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
@@ -32,7 +32,7 @@
   top: 0;
 }
 
-/* The dots/bullets/indicators */
+/* dots/bullets/indicators */
 .dot {
   height: 15px;
   width: 15px;
@@ -65,7 +65,7 @@
   to {opacity: 1}
 }
 
-/* On smaller screens, decrease text size */
+/* Fuer kleine Bildschirme gie Groesse verkleinern */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }

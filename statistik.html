@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Ukraine</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="statistik.css">
+	<link rel="icon" href="img/ukraine.png">
+	<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet"> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  </head>
+  <body>
+    <div class="head">
+	  <h1>Ukraine. Infoseite</h1>
+	</div>
+	<div class="navigation" id="navigation">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Startseite</a>
+      <a href="#">Geschichte</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="#">Hauptstadt</a>
+	  <a href="statistik.html">Statistik</a>
+	</div>
+	<div class="menu">
+      <a href="#" onclick="openNav()">Menu</a>
+	  <script>
+	      // Menu zeigen
+          function openNav() {
+              document.getElementById("navigation").style.width = "250px";
+          }
+          // Menu verstecken
+          function closeNav() {
+              document.getElementById("navigation").style.width = "0";
+          }
+      </script>
+	</div>
+	<div class="main">
+	  <h1>Ein bisschen Statistik</h1>
+	  <br>
+	  <p>Die groessten Staedte (von Bevoelkerungsanzahl)</p>
+	  <div class="chartcontainer">
+	    <canvas id="piechart"></canvas>
+	      <script>
+	          var ctx = document.getElementById("piechart");
+						var myPieChart = new Chart(ctx, {
+							type: 'pie',
+							data: {
+								labels: ["Kiew", "Kharkiw", "Odessa", "Dnepr", "Donetsk"],
+								datasets: [{
+								    label: "Menschen",
+									data: [2925760, 1439036, 1010783, 976525, 927201],
+									backgroundColor: ["#6A9AE8", "#FFFFA3", "#B84DCC", "#00CC66", "#FF6210"],
+									borderColor: ["#FFFFF5", "#FFFFF5", "#FFFFF5", "#FFFFF5", "#FFFFF5"],
+									borderWidth: 1
+								}]
+							},
+							options: {
+								//events: ['click']
+							}
+						});
+	    </script>
+	  </div>
+	  <p>Ethnien</p>
+	  <div class="chartcontainer">
+	    <canvas id="barchart"></canvas>
+	      <script>
+		      var ctx2 = document.getElementById("barchart")
+		      var myBarChart = new Chart(ctx2, {
+                    type: 'bar',
+                    data: {
+                        labels: ["Ukrainer", "Russen", "Moldawier", "Weissrussen", "Krimtataren"],
+                        datasets: [{
+                               label: "Anzahl (%)",
+                               backgroundColor: ["#6A9AE8", "#FFFFA3", "#B84DCC", "#00CC66", "#FF6210"],
+                               data: [77.8, 17.3, 0.8, 0.6, 0.5]
+                        }]
+                    },
+                    options: {
+                         legend: { display: false },
+                    }
+              });
+	      </script>
+	  </div>
+	  <p>Demographie</p>
+	  <div class="chartcontainer">
+	    <canvas id="chart"></canvas>
+	      <script>
+		  	  var ctx3 = document.getElementById("chart")
+		      var myChart = new Chart(ctx3, {
+                    type: 'line',
+                    data: {
+                        labels: ["2013", "2014", "2015", "2016", "2017"],
+                        datasets: [{
+                               label: "Menschen (Tausend)",
+                               backgroundColor: ["#6A9AE8", "#FFFFA3", "#B84DCC", "#00CC66", "#FF6210"],
+                               data: [45553.0, 45426.2, 42928.9, 42760.5, 42584.5],
+                        }]
+                    },
+                    options: {
+                         legend: { display: false },
+                    }
+              });
+	      </script>
+	  </div>
+	</div>
+  </body>
+</html>

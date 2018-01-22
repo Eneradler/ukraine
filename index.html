@@ -6,8 +6,8 @@
     <title>Info Ukraine</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="icon" href="img/ukraine.png">
-	<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet"> 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   </head>
   <body>
@@ -44,21 +44,12 @@
 		 Weissrussland im Norden, Polen, die Slowakei und Ungarn im Westen, Rumaenien und Moldawien im Suedwesten sowie an das Schwarze Meer 
 		 und das Asowsche Meer im Sueden. Die Hauptstadt und groesste Metropole des Landes ist Kiew, 
 		 weitere Ballungszentren sind Charkiw, Dnipro, Donezk und Odessa.</p>
-	  <div id="map">
+	  <div id="wappen" class="tooltip">
+	    <img src="img/gerb1.png" alt="Wappen">
 	  </div>
-	  <script>
-	      // google Karte hinzufuegen
-	      function myMap() {
-		      // Eigenschaften von der Karte
-              var mapOptions = {
-                  center: new google.maps.LatLng(51.5, -0.12),
-                  zoom: 10,
-                  mapTypeId: google.maps.MapTypeId.HYBRID
-              }
-              var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-          }
-      </script>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE0PqJEeYqw01iOMQWsmuUgnTvr-cxLsc&callback=myMap"></script>
+	  <div id="flagge" class="tooltip">
+	    <img src="img/ukr_flag.jpg" alt="Flagge">
+	  </div>
 	</div>
   </body>
 </html>

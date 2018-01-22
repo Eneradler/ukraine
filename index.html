@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Ukraine</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="img/ukraine.png">
+	<link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet"> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="head">
+	  <h1>Ukraine. Infoseite</h1>
+	</div>
+	<div class="navigation" id="navigation">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Startseite</a>
+      <a href="#">Geschichte</a>
+      <a href="#">Galerie</a>
+      <a href="#">Hauptstadt</a>
+	  <a href="#">Statistik</a>
+	</div>
+	<div class="menu">
+      <a href="#" onclick="openNav()">Menu</a>
+	  <script>
+	      // Menu zeigen
+          function openNav() {
+              document.getElementById("navigation").style.width = "250px";
+          }
+          // Menu verstecken
+          function closeNav() {
+              document.getElementById("navigation").style.width = "0";
+          }
+      </script>
+	</div>
+	<div class="main">
+	  <h1>Herzlich willkommen in die Ukraine!</h1>
+	  <h4>Die Informationsseite ueber den groessten Staat Europas.</h4>
+	  <br>
+	  <p>Mit einer Flache von 603.700 Quadratkilometern ist sie der groesste Staat, dessen Grenzen vollstandig in Europa liegen. 
+	     Sie verfuegt nach Russland uber das zweitgroesste Staatsgebiet in Europa. Die Ukraine grenzt an Russland im Nordosten und Osten, 
+		 Weissrussland im Norden, Polen, die Slowakei und Ungarn im Westen, Rumaenien und Moldawien im Suedwesten sowie an das Schwarze Meer 
+		 und das Asowsche Meer im Sueden. Die Hauptstadt und groesste Metropole des Landes ist Kiew, 
+		 weitere Ballungszentren sind Charkiw, Dnipro, Donezk und Odessa.</p>
+	  <div id="map">
+	  </div>
+	  <script>
+	      // google Karte hinzufuegen
+	      function myMap() {
+		      // Eigenschaften von der Karte
+              var mapOptions = {
+                  center: new google.maps.LatLng(51.5, -0.12),
+                  zoom: 10,
+                  mapTypeId: google.maps.MapTypeId.HYBRID
+              }
+              var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+          }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCE0PqJEeYqw01iOMQWsmuUgnTvr-cxLsc&callback=myMap"></script>
+	</div>
+  </body>
+</html>

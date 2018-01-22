@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Ukraine</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="kiew.css">
+	<link rel="icon" href="img/ukraine.png">
+	<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet"> 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  </head>
+  <body>
+    <div class="head">
+	  <h1>Ukraine. Infoseite</h1>
+	</div>
+	<div class="navigation" id="navigation">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Startseite</a>
+      <a href="#">Geschichte</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="kiew.html">Hauptstadt</a>
+	  <a href="statistik.html">Statistik</a>
+	</div>
+	<div class="menu">
+      <a href="#" onclick="openNav()">Menu</a>
+	  <script>
+	      // Menu zeigen
+          function openNav() {
+              document.getElementById("navigation").style.width = "250px";
+          }
+          // Menu verstecken
+          function closeNav() {
+              document.getElementById("navigation").style.width = "0";
+          }
+      </script>
+	</div>
+	<div class="main">
+	  <h1>Kiew</h1>
+	  <p>    Kiew ist die Hauptstadt und groesstete Stadt der Ukraine sowie Verwaltungssitz des Oblast Kiew und des Rajon Kiew-Swjatoschyn.
+	     Sie liegt am bis hierhin fuer kleinere Seeschiffe befahrbaren Dnepr und hat etwa 2,9 Millionen Einwohner im Stadtgebiet,
+		 die Agglomeration umfasst mehr als vier Millionen Einwohner.</p>
+      <p>    Kiew gilt als wichtiger Bildungs- und Industriestandort und bildet darueber hinaus den wichtigsten Verkehrsknotenpunkt des Landes. 
+	     Aufgrund ihrer historischen Bedeutung als Mittelpunkt der Kiewer Rus traegt die Stadt oft den Beinamen Mutter aller russischen Staedte. 
+		 Wegen der vielen Kirchen und Kloester und seiner Bedeutung fuer die orthodoxe Christenheit wird Kiew seit dem Mittelalter ausserdem 
+		 als Jerusalem des Ostens bezeichnet. Nach Ende des Zweiten Weltkriegs erhielt Kiew die Auszeichnung einer Heldenstadt.</p>
+	  <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 9</div>
+          <img src="img/kiew1.jpg" style="width:100%">
+          <div class="text"></div>
+        </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 9</div>
+        <img src="img/kiew2.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="img/kiew3.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+	 
+	 <div class="mySlides fade">
+        <div class="numbertext">4 / 9</div>
+        <img src="img/kiew4.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+	  
+	  <div class="mySlides fade">
+        <div class="numbertext">5 / 9</div>
+        <img src="img/kiew5.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+
+	 
+	  <div class="mySlides fade">
+        <div class="numbertext">6 / 9</div>
+        <img src="img/kiew6.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+
+	 
+	   <div class="mySlides fade">
+         <div class="numbertext">7 / 9</div>
+         <img src="img/kiew7.jpg" style="width:100%">
+         <div class="text"></div>
+      </div>
+	 
+	  <div class="mySlides fade">
+        <div class="numbertext">8 / 9</div>
+        <img src="img/kiew8.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+	 
+	  <div class="mySlides fade">
+        <div class="numbertext">9 / 9</div>
+        <img src="img/heimat.jpg" style="width:100%">
+        <div class="text"></div>
+      </div>
+     </div>
+     <br>
+     <div style="text-align:center">
+       <span class="dot"></span> 
+       <span class="dot"></span> 
+       <span class="dot"></span> 
+	   <span class="dot"></span> 
+       <span class="dot"></span> 
+       <span class="dot"></span>
+	   <span class="dot"></span> 
+       <span class="dot"></span> 
+       <span class="dot"></span>
+     </div>
+    </div>
+	 
+	 
+     <script>
+         var slideIndex = 0;
+         showSlides();
+
+         function showSlides() {
+             var i;
+             var slides = document.getElementsByClassName("mySlides");
+             var dots = document.getElementsByClassName("dot");
+             for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+             }
+             slideIndex++;
+             if (slideIndex > slides.length) {slideIndex = 1}    
+             for (i = 0; i < dots.length; i++) {
+                 dots[i].className = dots[i].className.replace(" active", "");
+             }
+             slides[slideIndex-1].style.display = "block";  
+             dots[slideIndex-1].className += " active";
+             setTimeout(showSlides, 3000); // Change image every 2 seconds
+        }
+      </script>
+	</div>
+  </body>
+</html>
